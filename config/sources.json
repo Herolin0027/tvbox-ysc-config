@@ -15,10 +15,14 @@
       "id": "fantaiying",
       "name": "饭太硬",
       "urls": [
-        "http://www.饭太硬.net/tv",
         "http://www.饭太硬.cc/tv",
-        "http://www.饭太硬.xyz/tv"
-      ]
+        "http://www.饭太硬.net/tv",
+        "http://fty.888484.xyz/tv",
+        "http://www.饭太硬.art/tv",
+        "http://fty.xxooo.cf/tv",
+        "https://qist.wyfc.qzz.io/fty.json"
+      ],
+      "direct_url": "https://qist.wyfc.qzz.io/fty.json"
     },
     {
       "id": "wangerxiao",
@@ -26,7 +30,8 @@
       "urls": [
         "https://d.kstore.dev/download/9280/wex.json",
         "https://9280.kstore.vip/newwex.json",
-        "http://new.王二小放牛娃.top"
+        "http://new.王二小放牛娃.top",
+        "http://tvbox.xn--4kq62z5rby2qupq9ub.top/"
       ]
     },
     {
@@ -79,6 +84,27 @@
       "urls": [
         "http://ztha.top/TVBox/GYCK.json"
       ]
+    },
+    {
+      "id": "qiaoji",
+      "name": "巧技",
+      "urls": [
+        "http://cdn.qiaoji8.com/tvbox.json"
+      ]
+    },
+    {
+      "id": "nanfeng",
+      "name": "南风",
+      "urls": [
+        "https://raw.githubusercontent.com/yoursmile66/TVBox/main/XC.json",
+        "https://gh-proxy.net/https://raw.githubusercontent.com/yoursmile66/TVBox/refs/heads/main/XC.json"
+      ]
+    }
+  ],
+  "direct_subscriptions": [
+    {
+      "name": "饭太硬江苏福建专用",
+      "url": "https://cdn09022024.gitlink.org.cn/api/v1/repos/xxooo/in/raw/in.bmp"
     }
   ]
 }

@@ -1,0 +1,124 @@
+{
+  "spider": "https://raw.githubusercontent.com/Herolin0027/tvbox/master/jar/spider.jar;md5;356ad46efe5d2b44a9cb4a6deb9ef0df",
+  "sites": [
+    {
+      "key": "xingya",
+      "name": "短剧｜星芽短剧",
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/xmbjm/svip/main/py/%E6%98%9F%E8%8A%BD%E7%9F%AD%E5%89%A7.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "lanmei",
+      "name": "短剧｜蓝莓短剧",
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/xmbjm/svip/main/py/%E8%93%9D%E8%8E%93%E7%9F%AD%E5%89%A7.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "haima",
+      "name": "短剧｜海马短剧",
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/xmbjm/svip/main/py/%E6%B5%B7%E9%A9%AC%E5%BD%B1%E8%A7%86.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "xifu",
+      "name": "短剧｜喜福短剧",
+      "type": 3,
+      "api": "https://raw.gitcode.com/u013624795/jk/blobs/65cd6e302e6efd1b08ba91ed3da05b27257d562c/%E5%96%9C%E7%A6%8F%E7%9F%AD%E5%89%A7.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "duanju55",
+      "name": "短剧｜55短剧",
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/DodgeZhang/tvbox/main/webhome/Python/%E7%9F%AD%E5%89%A7/%5B%E7%9F%AD%5D55%E7%9F%AD%E5%89%A7.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "guoguo",
+      "name": "短剧｜果果短剧",
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/DodgeZhang/tvbox/main/webhome/Python/%E7%9F%AD%E5%89%A7/%5B%E7%9F%AD%5D%E6%9E%9C%E6%9E%9C%E7%9F%AD%E5%89%A7.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "hongguo",
+      "name": "短剧｜红果短剧",
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/Herolin0027/tvbox/master/py/%E7%BA%A2%E6%9E%9C%E7%9F%AD%E5%89%A7.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "diduan",
+      "name": "短剧｜低端影视短剧",
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/lihao880/asdzxc/main/py/%E4%BD%8E%E7%AB%AF%E5%BD%B1%E8%A7%86%E7%9F%AD%E5%89%A7.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "yeshe",
+      "name": "短剧｜夜社短剧",
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/ge6bu6/1/main/py/%E5%A4%9C%E7%A4%BE%E7%9F%AD%E5%89%A7.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "niuniu",
+      "name": "短剧｜牛牛短剧",
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/DodgeZhang/tvbox/main/webhome/Python/%E7%9F%AD%E5%89%A7/%5B%E7%9F%AD%5D%E7%89%9B%E7%89%9B%E7%9F%AD%E5%89%A7.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "daquan",
+      "name": "短剧｜短剧大全",
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/DodgeZhang/tvbox/main/haitun/ext/%E7%9F%AD%E5%89%A7%E5%A4%A7%E5%85%A8.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "bashi",
+      "name": "短剧｜短剧巴士",
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/DodgeZhang/tvbox/main/haitun/ext/%E7%9F%AD%E5%89%A7%E5%B7%B4%E5%A3%AB.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "dushe",
+      "name": "短剧｜毒舌短剧",
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/DodgeZhang/tvbox/main/haitun/ext/%E6%AF%92%E8%88%8C%E7%9F%AD%E5%89%A7.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    }
+  ],
+  "parses": [],
+  "lives": []
+}

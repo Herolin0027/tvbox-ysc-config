@@ -1,5 +1,5 @@
 {
-  "spider": "./fty.jar;md5;3d161697458ecbcd2651a749db761ba1",
+  "spider": "https://raw.liucn.cc/box/fty.jar;md5;3d161697458ecbcd2651a749db761ba1",
   "wallpaper": "https://深色壁纸.xxooo.cf/",
   "warningText": "资源来自网络，所有内容仅供学习使用，请勿用于违法及商业用途，请勿付费购买。",
   "sites": [
@@ -20,7 +20,7 @@
       "searchable": 0,
       "filterable": 0,
       "changeable": 0,
-      "jar": "./libs/jar/Token.jar",
+      "jar": "https://raw.liucn.cc/box/libs/jar/Token.jar",
       "ext": "http://127.0.0.1:9978/file/tvfan/token.txt"
     },
     {
@@ -30,27 +30,27 @@
       "api": "csp_Market",
       "searchable": 0,
       "changeable": 0,
-      "ext": "./libs/market.json",
-      "jar": "./libs/jar/app.jar"
+      "ext": "https://raw.liucn.cc/box/libs/market.json",
+      "jar": "https://raw.liucn.cc/box/libs/jar/app.jar"
     },
     {
       "key": "直播转点播",
       "name": "📺︎┃电视┃点播",
       "playerType": 1,
       "type": 3,
-      "api": "./libs/tv/zb.min.js",
+      "api": "https://raw.liucn.cc/box/libs/tv/zb.min.js",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 0,
-      "ext": "./libs/tv/zb.json"
+      "ext": "https://raw.liucn.cc/box/libs/tv/zb.json"
     },
     {
       "key": "虎牙直播js",
       "name": "🐯┃虎牙┃直播",
       "playerType": 1,
       "type": 3,
-      "api": "./libs/js/drpy2.min.js",
-      "ext": "./libs/js/虎牙直播.js",
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
+      "ext": "https://raw.liucn.cc/box/libs/js/虎牙直播.js",
       "style": {
         "type": "rect",
         "ratio": 1.755
@@ -64,8 +64,8 @@
       "name": "🐟┃斗鱼┃直播",
       "playerType": 1,
       "type": 3,
-      "api": "./libs/js/drpy2.min.js",
-      "ext": "./libs/js/斗鱼直播.js",
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
+      "ext": "https://raw.liucn.cc/box/libs/js/斗鱼直播.js",
       "style": {
         "type": "rect",
         "ratio": 1.755
@@ -257,8 +257,8 @@
       "quickSearch": 1,
       "changeable": 1,
       "playerType": "1",
-      "api": "./lib/drpy2.min.js",
-      "ext": "./lib/jp.js"
+      "api": "https://raw.liucn.cc/box/lib/drpy2.min.js",
+      "ext": "https://raw.liucn.cc/box/lib/jp.js"
     },
     {
       "key": "厂长",
@@ -321,8 +321,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/nkvlog.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/nkvlog.json"
     },
     {
       "key": "csp_Free",
@@ -332,8 +332,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/Free影视.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/Free影视.json"
     },
     {
       "key": "csp_KmeiJu",
@@ -341,14 +341,14 @@
       "type": 3,
       "api": "csp_KmeiJu",
       "playerType": 2,
-      "jar": "./libs/jar/Panda.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/Panda.jar"
     },
     {
       "key": "csp_SuBaiBai",
       "name": "🏳️┃素白┃影视",
       "type": 3,
       "api": "csp_SuBaiBai",
-      "jar": "./libs/jar/Panda.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/Panda.jar"
     },
     {
       "key": "csp_Ikan",
@@ -356,7 +356,7 @@
       "type": 3,
       "api": "csp_Ikan",
       "playerType": 2,
-      "jar": "./libs/jar/Panda.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/Panda.jar"
     },
     {
       "key": "csp_FengGo",
@@ -364,7 +364,7 @@
       "type": 3,
       "api": "csp_FengGo",
       "playerType": 2,
-      "jar": "./libs/jar/Panda.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/Panda.jar"
     },
     {
       "key": "csp_Juqq",
@@ -372,7 +372,7 @@
       "type": 3,
       "playerType": "2",
       "api": "csp_Juqq",
-      "jar": "./libs/jar/Panda.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/Panda.jar"
     },
     {
       "key": "csp_Netfixtv",
@@ -382,7 +382,7 @@
       "playerType": 2,
       "filterable": 1,
       "ext": "",
-      "jar": "./libs/jar/Panda.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/Panda.jar"
     },
     {
       "key": "csp_Vidhub2",
@@ -392,7 +392,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/Panda.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/Panda.jar"
     },
     {
       "key": "csp_AppRZ",
@@ -401,7 +401,7 @@
       "playerType": "2",
       "api": "csp_AppRZ",
       "ext": "http://rzys.xyz/",
-      "jar": "./libs/jar/Panda.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/Panda.jar"
     },
     {
       "key": "FreeOK",
@@ -411,7 +411,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/Panda.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/Panda.jar"
     },
     {
       "key": "毛驴",
@@ -421,24 +421,24 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/Panda.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/Panda.jar"
     },
     {
       "key": "云播影视",
       "name": "☁️┃云播┃影视",
       "type": 3,
       "playerType": "2",
-      "api": "./libs/js/drpy2.min.js",
-      "ext": "./lib/TVB云播.js",
-      "jar": "./libs/jar/Panda.jar"
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
+      "ext": "https://raw.liucn.cc/box/lib/TVB云播.js",
+      "jar": "https://raw.liucn.cc/box/libs/jar/Panda.jar"
     },
     {
       "key": "虎虎1",
       "name": "🐯┃虎虎┃影视",
       "type": 3,
       "api": "csp_XBPQ",
-      "ext": "./lib/虎虎.json",
-      "jar": "./libs/jar/Panda.jar"
+      "ext": "https://raw.liucn.cc/box/lib/虎虎.json",
+      "jar": "https://raw.liucn.cc/box/libs/jar/Panda.jar"
     },
     {
       "key": "csp_SC1080",
@@ -448,7 +448,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/Panda.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/Panda.jar"
     },
     {
       "key": "csp_兄弟",
@@ -458,8 +458,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/兄弟.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/兄弟.json"
     },
     {
       "key": "csp_Duopan",
@@ -468,7 +468,7 @@
       "api": "csp_Duopan",
       "playerType": 2,
       "filterable": 1,
-      "jar": "./libs/jar/Panda.jar",
+      "jar": "https://raw.liucn.cc/box/libs/jar/Panda.jar",
       "ext": "https://duopan.fun/"
     },
     {
@@ -478,7 +478,7 @@
       "type": 3,
       "playerType": "2",
       "ext": "http://api2.rinhome.com",
-      "jar": "./libs/jar/Panda.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/Panda.jar"
     },
     {
       "key": "csp_Ikanbot",
@@ -489,7 +489,7 @@
       "quickSearch": 1,
       "filterable": 1,
       "ext": "[排序:lz线路,kuaik]",
-      "jar": "./libs/jar/XYQH.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/XYQH.jar"
     },
     {
       "key": "csp_hanjulao",
@@ -499,8 +499,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/hanjulao.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/hanjulao.json"
     },
     {
       "key": "XYQH_JOJO",
@@ -510,8 +510,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/XYQH.jar",
-      "ext": "./libs/xyq/jojo.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/XYQH.jar",
+      "ext": "https://raw.liucn.cc/box/libs/xyq/jojo.json"
     },
     {
       "key": "csp_XYQHiker_VSYY",
@@ -521,8 +521,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/XYQH.jar",
-      "ext": "./libs/xyq/VS影院.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/XYQH.jar",
+      "ext": "https://raw.liucn.cc/box/libs/xyq/VS影院.json"
     },
     {
       "key": "csp_XYQ素白白",
@@ -532,8 +532,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/XYQH.jar",
-      "ext": "./libs/xyq/素白白.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/XYQH.jar",
+      "ext": "https://raw.liucn.cc/box/libs/xyq/素白白.json"
     },
     {
       "key": "csp_XYQ电影牛",
@@ -543,8 +543,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/XYQH.jar",
-      "ext": "./libs/xyq/电影牛.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/XYQH.jar",
+      "ext": "https://raw.liucn.cc/box/libs/xyq/电影牛.json"
     },
     {
       "key": "csp_Ysj",
@@ -586,8 +586,8 @@
       "key": "聚短视频js",
       "name": "📽️聚短┃视频",
       "type": 3,
-      "api": "./lib/drpy2.min.js",
-      "ext": "./lib/短视频.js",
+      "api": "https://raw.liucn.cc/box/lib/drpy2.min.js",
+      "ext": "https://raw.liucn.cc/box/lib/短视频.js",
       "searchable": 0,
       "quickSearch": 0,
       "changeable": 0
@@ -596,8 +596,8 @@
       "key": "有声小说js",
       "name": "🎧有声┃小说",
       "type": 3,
-      "api": "./lib/drpy2.min.js",
-      "ext": "./lib/有声小说吧.js",
+      "api": "https://raw.liucn.cc/box/lib/drpy2.min.js",
+      "ext": "https://raw.liucn.cc/box/lib/有声小说吧.js",
       "style": {
         "type": "rect",
         "ratio": 1
@@ -734,7 +734,7 @@
       "key": "drpy_js_lf_p2p",
       "name": "💣┃磁力p2p┃搜索",
       "type": 3,
-      "api": "./libs/js/lf_p2p1_min.js"
+      "api": "https://raw.liucn.cc/box/libs/js/lf_p2p1_min.js"
     },
     {
       "key": "csp_Nbys",
@@ -776,7 +776,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/P4.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/P4.jar"
     },
     {
       "key": "P4_哔嘀",
@@ -787,7 +787,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/P4.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/P4.jar"
     },
     {
       "key": "P4_皮皮虾",
@@ -797,7 +797,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/P4.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/P4.jar"
     },
     {
       "key": "csp_MeiJu69",
@@ -875,231 +875,231 @@
       "name": "🏰┃圣城┃影视",
       "type": 3,
       "playerType": "2",
-      "api": "./libs/js/drpy2.min.js",
-      "ext": "./libs/js/SC1080.js"
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
+      "ext": "https://raw.liucn.cc/box/libs/js/SC1080.js"
     },
     {
       "key": "云播影视",
       "name": "☁️┃云播┃影视",
       "type": 3,
       "playerType": "2",
-      "api": "./libs/js/drpy2.min.js",
-      "ext": "./libs/js/TVB云播.js"
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
+      "ext": "https://raw.liucn.cc/box/libs/js/TVB云播.js"
     },
     {
       "key": "爱看影视",
       "name": "❤┃爱看┃蓝光",
       "type": 3,
       "playerType": "2",
-      "api": "./libs/js/drpy2.min.js",
-      "ext": "./libs/js/爱看.js"
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
+      "ext": "https://raw.liucn.cc/box/libs/js/爱看.js"
     },
     {
       "key": "js_007",
       "name": "🕵‍┃特工┃影视",
       "type": 3,
-      "api": "./libs/js/drpy2.min.js",
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "./libs/js/007.js"
+      "ext": "https://raw.liucn.cc/box/libs/js/007.js"
     },
     {
       "key": "dr_低端",
       "name": "🔥┃低端┃Js",
       "type": 3,
-      "api": "./libs/js/drpy2.min.js",
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
       "searchable": 1,
       "playerType": 2,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "./libs/js/ddys.js"
+      "ext": "https://raw.liucn.cc/box/libs/js/ddys.js"
     },
     {
       "key": "奇优",
       "name": " 🍩┃奇优┃影视",
       "type": 3,
       "playerType": "2",
-      "api": "./libs/js/drpy2.min.js",
-      "ext": "./libs/js/奇优.js"
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
+      "ext": "https://raw.liucn.cc/box/libs/js/奇优.js"
     },
     {
       "key": "nangua",
       "name": "🎃┃南瓜┃影视",
       "type": 3,
       "playerType": "2",
-      "api": "./libs/js/drpy2.min.js",
-      "ext": "./libs/js/南瓜.js"
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
+      "ext": "https://raw.liucn.cc/box/libs/js/南瓜.js"
     },
     {
       "key": "js_骚火电影",
       "name": "🔥┃骚火┃影视",
       "type": 3,
-      "api": "./libs/js/drpy2.min.js",
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "./libs/js/saohuo.js"
+      "ext": "https://raw.liucn.cc/box/libs/js/saohuo.js"
     },
     {
       "key": "dr_荐片",
       "name": "⏳┃荐片┃Js",
       "type": 3,
-      "api": "./libs/js/drpy2.min.js",
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
       "searchable": 1,
       "playerType": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "./libs/js/荐片.js"
+      "ext": "https://raw.liucn.cc/box/libs/js/荐片.js"
     },
     {
       "key": "js_Lib",
       "name": "🍲┃Lib┃影视",
       "type": 3,
-      "api": "./libs/js/drpy2.min.js",
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "./libs/js/libvio.js"
+      "ext": "https://raw.liucn.cc/box/libs/js/libvio.js"
     },
     {
       "key": "js_czsapp",
       "name": "🏭️┃厂长┃Js",
       "type": 3,
-      "api": "./libs/js/drpy2.min.js",
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "./libs/js/czspp.js"
+      "ext": "https://raw.liucn.cc/box/libs/js/czspp.js"
     },
     {
       "key": "js_大师兄",
       "name": "🐵┃师兄┃影视",
       "type": 3,
-      "api": "./libs/js/drpy2.min.js",
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "./libs/js/大师兄影视.js"
+      "ext": "https://raw.liucn.cc/box/libs/js/大师兄影视.js"
     },
     {
       "key": "js_电影先生",
       "name": "🤵┃电影┃先生",
       "type": 3,
-      "api": "./libs/js/drpy2.min.js",
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "./libs/js/电影先生.js"
+      "ext": "https://raw.liucn.cc/box/libs/js/电影先生.js"
     },
     {
       "key": "js_Xinsj",
       "name": "🐠┃视觉┃影院",
       "type": 3,
-      "api": "./libs/js/drpy2.min.js",
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "./libs/js/xsj.js"
+      "ext": "https://raw.liucn.cc/box/libs/js/xsj.js"
     },
     {
       "key": "js_农民",
       "name": "👨‍🌾┃农民┃影视",
       "type": 3,
-      "api": "./libs/js/drpy2.min.js",
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "./libs/js/nongmin.js"
+      "ext": "https://raw.liucn.cc/box/libs/js/nongmin.js"
     },
     {
       "key": "js_bzys",
       "name": "🌋┃B站┃影视",
       "type": 3,
-      "api": "./libs/js/drpy2.min.js",
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "./libs/js/bzys.js"
+      "ext": "https://raw.liucn.cc/box/libs/js/bzys.js"
     },
     {
       "key": "js_555",
       "name": "🌟┃三五┃影视",
       "type": 3,
-      "api": "./libs/js/drpy2.min.js",
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "./libs/js/555.js"
+      "ext": "https://raw.liucn.cc/box/libs/js/555.js"
     },
     {
       "key": "dr_iqiyi",
       "name": "🥝┃爱奇异(官)",
       "type": 3,
-      "api": "./libs/js/drpy2.min.js",
-      "ext": "./libs/js/iqiyi.js"
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
+      "ext": "https://raw.liucn.cc/box/libs/js/iqiyi.js"
     },
     {
       "key": "dr_youku",
       "name": "🥔┃优酷(官)",
       "type": 3,
-      "api": "./libs/js/drpy2.min.js",
-      "ext": "./libs/js/youku.js"
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
+      "ext": "https://raw.liucn.cc/box/libs/js/youku.js"
     },
     {
       "key": "dr_qq",
       "name": "🐧┃腾讯(官)",
       "type": 3,
-      "api": "./libs/js/drpy2.min.js",
-      "ext": "./libs/js/qq.js"
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
+      "ext": "https://raw.liucn.cc/box/libs/js/qq.js"
     },
     {
       "key": "dr_mgtv",
       "name": "🥭┃芒果(官)",
       "type": 3,
-      "api": "./libs/js/drpy2.min.js",
-      "ext": "./libs/js/mgtv.js"
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
+      "ext": "https://raw.liucn.cc/box/libs/js/mgtv.js"
     },
     {
       "key": "dr_搜狗",
       "name": "🚛┃搜狗(官)",
       "type": 3,
-      "api": "./libs/js/drpy2.min.js",
-      "ext": "./libs/js/caigou.js"
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
+      "ext": "https://raw.liucn.cc/box/libs/js/caigou.js"
     },
     {
       "key": "dr_360影视",
       "name": "📺┃360(官) ",
       "type": 3,
-      "api": "./libs/js/drpy2.min.js",
-      "ext": "./libs/js/360.js"
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
+      "ext": "https://raw.liucn.cc/box/libs/js/360.js"
     },
     {
       "key": "dr_奇珍异兽",
       "name": "🦍┃奇珍┃异兽",
       "type": 3,
-      "api": "./libs/js/drpy2.min.js",
-      "ext": "./libs/js/奇珍异兽.js"
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
+      "ext": "https://raw.liucn.cc/box/libs/js/奇珍异兽.js"
     },
     {
       "key": "dr_腾云驾雾",
       "name": "☁️┃腾云┃驾雾",
       "type": 3,
-      "api": "./libs/js/drpy2.min.js",
-      "ext": "./libs/js/腾云驾雾.js"
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
+      "ext": "https://raw.liucn.cc/box/libs/js/腾云驾雾.js"
     },
     {
       "key": "dr_百忙无果",
       "name": "🍋┃百忙┃无果",
       "type": 3,
-      "api": "./libs/js/drpy2.min.js",
-      "ext": "./libs/js/百忙无果.js"
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
+      "ext": "https://raw.liucn.cc/box/libs/js/百忙无果.js"
     },
     {
       "key": "蚂蚁",
       "name": "🐜1080P┃蚂蚁",
       "type": 3,
-      "jar": "./libs/jar/c.jar",
+      "jar": "https://raw.liucn.cc/box/libs/jar/c.jar",
       "api": "csp_AppYsV2",
       "ext": "http://122.228.84.103:5822/api.php/app/",
       "searchable": 1,
@@ -1110,7 +1110,7 @@
       "key": "即可",
       "name": "👋1080P┃即刻",
       "type": 3,
-      "jar": "./libs/jar/c.jar",
+      "jar": "https://raw.liucn.cc/box/libs/jar/c.jar",
       "api": "csp_XBPQ",
       "ext": {
         "嗅探词": ".m3u8",
@@ -1127,7 +1127,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 0,
-      "jar": "./libs/jar/c.jar",
+      "jar": "https://raw.liucn.cc/box/libs/jar/c.jar",
       "ext": "http://111.230.51.151:2323/api.php/app/"
     },
     {
@@ -1137,7 +1137,7 @@
       "api": "csp_AppYsV2",
       "searchable": 1,
       "quickSearch": 1,
-      "jar": "./libs/jar/c.jar",
+      "jar": "https://raw.liucn.cc/box/libs/jar/c.jar",
       "ext": "http://122.228.84.103:6117/api.php/app/"
     },
     {
@@ -1148,7 +1148,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 0,
-      "jar": "./libs/jar/c.jar",
+      "jar": "https://raw.liucn.cc/box/libs/jar/c.jar",
       "ext": "http://xiutan.shiyifacai.com/zuoan/api.php/app/"
     },
     {
@@ -1159,8 +1159,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/c.jar",
-      "ext": "./libs/c/乌鸦.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/c.jar",
+      "ext": "https://raw.liucn.cc/box/libs/c/乌鸦.json"
     },
     {
       "key": "cc_茶杯狐",
@@ -1170,8 +1170,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/c.jar",
-      "ext": "./libs/c/茶杯狐.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/c.jar",
+      "ext": "https://raw.liucn.cc/box/libs/c/茶杯狐.json"
     },
     {
       "key": "cc_热播之家",
@@ -1181,8 +1181,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/c.jar",
-      "ext": "./libs/c/热播之家.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/c.jar",
+      "ext": "https://raw.liucn.cc/box/libs/c/热播之家.json"
     },
     {
       "key": "cc_shdy2",
@@ -1192,8 +1192,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/c.jar",
-      "ext": "./libs/c/骚火2.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/c.jar",
+      "ext": "https://raw.liucn.cc/box/libs/c/骚火2.json"
     },
     {
       "key": "cc_黑狐",
@@ -1203,8 +1203,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/c.jar",
-      "ext": "./libs/c/黑狐.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/c.jar",
+      "ext": "https://raw.liucn.cc/box/libs/c/黑狐.json"
     },
     {
       "key": "cc_蛋蛋",
@@ -1214,8 +1214,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/c.jar",
-      "ext": "./libs/c/蛋蛋剧.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/c.jar",
+      "ext": "https://raw.liucn.cc/box/libs/c/蛋蛋剧.json"
     },
     {
       "key": "csp_小胡",
@@ -1234,8 +1234,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/c.jar",
-      "ext": "./libs/c/相声.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/c.jar",
+      "ext": "https://raw.liucn.cc/box/libs/c/相声.json"
     },
     {
       "key": "cc_评书",
@@ -1245,8 +1245,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/c.jar",
-      "ext": "./libs/c/评书.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/c.jar",
+      "ext": "https://raw.liucn.cc/box/libs/c/评书.json"
     },
     {
       "key": "cc_03影院",
@@ -1256,8 +1256,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/c.jar",
-      "ext": "./libs/c/03yy.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/c.jar",
+      "ext": "https://raw.liucn.cc/box/libs/c/03yy.json"
     },
     {
       "key": "csp_蘑菇",
@@ -1267,8 +1267,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/蘑菇.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/蘑菇.json"
     },
     {
       "key": "csp_胖虎",
@@ -1278,8 +1278,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/胖虎.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/胖虎.json"
     },
     {
       "key": "csp_蛋蛋",
@@ -1289,8 +1289,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/蛋蛋影视.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/蛋蛋影视.json"
     },
     {
       "key": "csp_达龟",
@@ -1300,8 +1300,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/达达龟影视.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/达达龟影视.json"
     },
     {
       "key": "csp_黑狐",
@@ -1311,8 +1311,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/黑狐影视.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/黑狐影视.json"
     },
     {
       "key": "csp_奇优",
@@ -1322,8 +1322,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/奇优影院.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/奇优影院.json"
     },
     {
       "key": "csp_TVB",
@@ -1333,8 +1333,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/TVB云播.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/TVB云播.json"
     },
     {
       "key": "csp_骚火",
@@ -1344,8 +1344,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/骚火影视.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/骚火影视.json"
     },
     {
       "key": "csp_农民",
@@ -1355,8 +1355,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/农民影视.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/农民影视.json"
     },
     {
       "key": "csp_奇优",
@@ -1366,8 +1366,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/奇优影视.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/奇优影视.json"
     },
     {
       "key": "csp_疯狗",
@@ -1377,8 +1377,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/疯狗影视.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/疯狗影视.json"
     },
     {
       "key": "csp_万达",
@@ -1388,8 +1388,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/万达影视.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/万达影视.json"
     },
     {
       "key": "csp_爱看",
@@ -1399,8 +1399,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/爱看影视.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/爱看影视.json"
     },
     {
       "key": "csp_七新",
@@ -1410,8 +1410,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/七新影视.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/七新影视.json"
     },
     {
       "key": "csp_超前",
@@ -1421,8 +1421,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/超前B站.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/超前B站.json"
     },
     {
       "key": "csp_玖摇",
@@ -1432,8 +1432,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/4k剧院.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/4k剧院.json"
     },
     {
       "key": "csp_不卡",
@@ -1443,8 +1443,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/真不卡影视.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/真不卡影视.json"
     },
     {
       "key": "csp_午舞",
@@ -1454,8 +1454,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/五五影视.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/五五影视.json"
     },
     {
       "key": "csp_视觉",
@@ -1465,8 +1465,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/新视觉影视.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/新视觉影视.json"
     },
     {
       "key": "csp_圣城",
@@ -1476,8 +1476,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/圣城影视.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/圣城影视.json"
     },
     {
       "key": "csp_好戏",
@@ -1487,8 +1487,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/好戏影视.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/好戏影视.json"
     },
     {
       "key": "csp_七月",
@@ -1498,8 +1498,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/七月影视.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/七月影视.json"
     },
     {
       "key": "csp_日后",
@@ -1509,8 +1509,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/348影视.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/348影视.json"
     },
     {
       "key": "csp_土豪",
@@ -1520,8 +1520,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/土豪影视.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/土豪影视.json"
     },
     {
       "key": "csp_兔年",
@@ -1531,8 +1531,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/YYDS影视.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/YYDS影视.json"
     },
     {
       "key": "csp_苹果",
@@ -1542,8 +1542,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/苹果影视.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/苹果影视.json"
     },
     {
       "key": "csp_米爱",
@@ -1553,8 +1553,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/米爱影视.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/米爱影视.json"
     },
     {
       "key": "csp_非凡",
@@ -1564,8 +1564,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/非凡资源网.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/非凡资源网.json"
     },
     {
       "key": "csp_量子",
@@ -1575,8 +1575,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/量子资源网.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/量子资源网.json"
     },
     {
       "key": "csp_nkdyw",
@@ -1586,8 +1586,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/nkdyw.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/nkdyw.json"
     },
     {
       "key": "csp_555电影",
@@ -1597,8 +1597,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/555电影.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/555电影.json"
     },
     {
       "key": "csp_voflix",
@@ -1608,8 +1608,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/voflix.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/voflix.json"
     },
     {
       "key": "csp_nkvod",
@@ -1619,8 +1619,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/nkvod.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/nkvod.json"
     },
     {
       "key": "csp_lkvod",
@@ -1630,8 +1630,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/lkvod.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/lkvod.json"
     },
     {
       "key": "csp_SNzy",
@@ -2038,38 +2038,38 @@
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 0,
-      "api": "./libs/js/drpy2.min.js",
-      "ext": "./libs/js/4khdr.js"
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
+      "ext": "https://raw.liucn.cc/box/libs/js/4khdr.js"
     },
     {
       "key": "js_6V",
       "name": "✡️六维磁力┃Js",
       "type": 3,
-      "api": "./libs/js/drpy2.min.js",
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "./libs/js/6V.js"
+      "ext": "https://raw.liucn.cc/box/libs/js/6V.js"
     },
     {
       "key": "js_磁力熊",
       "name": "🐻‍贝尔磁力┃Js",
       "type": 3,
-      "api": "./libs/js/drpy2.min.js",
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "./libs/js/bear.js"
+      "ext": "https://raw.liucn.cc/box/libs/js/bear.js"
     },
     {
       "key": "js_酷吧",
       "name": "😎酷吧磁力┃Js",
       "type": 3,
-      "api": "./libs/js/drpy2.min.js",
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "./lib/dr/kuba.js"
+      "ext": "https://raw.liucn.cc/box/lib/dr/kuba.js"
     },
     {
       "key": "XYQH_电影港",
@@ -2077,8 +2077,8 @@
       "type": 3,
       "playerType": 1,
       "api": "csp_XYQHiker",
-      "jar": "./libs/jar/XYQH.jar",
-      "ext": "./libs/xyq/港口.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/XYQH.jar",
+      "ext": "https://raw.liucn.cc/box/libs/xyq/港口.json"
     },
     {
       "key": "csp_MeijuMi",
@@ -2087,7 +2087,7 @@
       "api": "csp_MeijuMi",
       "searchable": 1,
       "quickSearch": 1,
-      "jar": "./libs/jar/xyq.jar",
+      "jar": "https://raw.liucn.cc/box/libs/jar/xyq.jar",
       "filterable": 1
     },
     {
@@ -2097,7 +2097,7 @@
       "api": "csp_Xunlei8",
       "searchable": 1,
       "quickSearch": 1,
-      "jar": "./libs/jar/xyq.jar",
+      "jar": "https://raw.liucn.cc/box/libs/jar/xyq.jar",
       "filterable": 1
     },
     {
@@ -2108,8 +2108,8 @@
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/维奇动漫.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/维奇动漫.json"
     },
     {
       "key": "cctv",
@@ -2118,8 +2118,8 @@
       "api": "csp_CCTV",
       "searchable": 0,
       "filterable": 0,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/央视大全.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/央视大全.json"
     },
     {
       "key": "py_cctv_少儿",
@@ -2129,8 +2129,8 @@
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/py_央视少儿.py"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/py_央视少儿.py"
     },
     {
       "key": "央视经典",
@@ -2140,8 +2140,8 @@
       "searchable": 0,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/哔哩经典.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/哔哩经典.json"
     },
     {
       "key": "csp_XPath_企鹅体育",
@@ -2155,7 +2155,7 @@
       "searchable": 0,
       "quickSearch": 0,
       "changeable": 0,
-      "ext": "./libs/企鹅直播.json"
+      "ext": "https://raw.liucn.cc/box/libs/企鹅直播.json"
     },
     {
       "key": "py_qie",
@@ -2165,7 +2165,7 @@
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 1,
-      "ext": "./libs/qie.py"
+      "ext": "https://raw.liucn.cc/box/libs/qie.py"
     },
     {
       "key": "py_cctv",
@@ -2175,7 +2175,7 @@
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 1,
-      "ext": "./libs/cctv.py"
+      "ext": "https://raw.liucn.cc/box/libs/cctv.py"
     },
     {
       "key": "MV_vod",
@@ -2206,16 +2206,16 @@
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 0,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/酷奇MV.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/酷奇MV.json"
     },
     {
       "key": "88js",
       "name": "⚽ 88┃看球",
       "playerType": 1,
       "type": 3,
-      "api": "./libs/js/drpy2.min.js",
-      "ext": "./libs/js/88看球.js",
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
+      "ext": "https://raw.liucn.cc/box/libs/js/88看球.js",
       "style": {
         "type": "rect",
         "ratio": 1
@@ -2229,8 +2229,8 @@
       "name": "⚽ Jrs┃球迷",
       "playerType": 1,
       "type": 3,
-      "api": "./libs/js/drpy2.min.js",
-      "ext": "./libs/js/jrk.js",
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
+      "ext": "https://raw.liucn.cc/box/libs/js/jrk.js",
       "style": {
         "type": "rect",
         "ratio": 1
@@ -2244,8 +2244,8 @@
       "name": "⚽310┃看球",
       "playerType": 1,
       "type": 3,
-      "api": "./libs/js/drpy2.min.js",
-      "ext": "./libs/js/310直播.js",
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
+      "ext": "https://raw.liucn.cc/box/libs/js/310直播.js",
       "style": {
         "type": "rect",
         "ratio": 1
@@ -2259,8 +2259,8 @@
       "name": "🎤酷奇┃MV",
       "playerType": 1,
       "type": 3,
-      "api": "./libs/js/drpy2.min.js",
-      "ext": "./libs/js/酷奇MV.js",
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
+      "ext": "https://raw.liucn.cc/box/libs/js/酷奇MV.js",
       "style": {
         "type": "rect",
         "ratio": 1.597
@@ -2274,22 +2274,22 @@
       "name": "🥎┃格斗┃直播",
       "playerType": 1,
       "type": 3,
-      "api": "./libs/js/drpy2.min.js",
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 0,
-      "ext": "./libs/js/武享吧.js"
+      "ext": "https://raw.liucn.cc/box/libs/js/武享吧.js"
     },
     {
       "key": "js_a8音乐",
       "name": "🎸┃奥迪┃音乐",
       "playerType": 1,
       "type": 3,
-      "api": "./libs/js/drpy2.min.js",
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "./libs/js/a8音乐.js"
+      "ext": "https://raw.liucn.cc/box/libs/js/a8音乐.js"
     },
     {
       "key": "csp_短剧",
@@ -2299,15 +2299,15 @@
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/短剧网.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/短剧网.json"
     },
     {
       "key": "csp_聚短视频",
       "name": "📽️聚短┃视频",
       "type": 3,
-      "api": "./libs/js/drpy2.min.js",
-      "ext": "./libs/js/短视频.js",
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
+      "ext": "https://raw.liucn.cc/box/libs/js/短视频.js",
       "searchable": 0,
       "quickSearch": 0,
       "changeable": 0
@@ -2316,8 +2316,8 @@
       "key": "有声小说js",
       "name": "🎧有声┃小说",
       "type": 3,
-      "api": "./libs/js/drpy2.min.js",
-      "ext": "./libs/js/有声小说吧.js",
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
+      "ext": "https://raw.liucn.cc/box/libs/js/有声小说吧.js",
       "style": {
         "type": "rect",
         "ratio": 1
@@ -2334,15 +2334,15 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/XYQH.jar",
-      "ext": "./libs/xyq/Bili短剧.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/XYQH.jar",
+      "ext": "https://raw.liucn.cc/box/libs/xyq/Bili短剧.json"
     },
     {
       "key": "XBPQ_葡萄",
       "name": "🎦┃短剧┃葡萄",
       "type": 3,
       "api": "csp_XBPQ",
-      "jar": "./libs/jar/HCCX.jar",
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
       "ext": {
         "数组": "class=\"stui-vodlist__box&&</li",
         "分类url": "https://www.putaojuchang.com/show/{cateId}/area/{area}/class/{class}/by/{by}/page/{catePg}/year/{year}.html",
@@ -2357,7 +2357,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./libs/jar/XBPQ.jar",
+      "jar": "https://raw.liucn.cc/box/libs/jar/XBPQ.jar",
       "ext": {
         "分类url": "https://aoao.tv/vodshow/{cateId}--------{catePg}---.html",
         "分类": "短剧$20#电视剧$21#电影$22#动漫$23#综艺$24"
@@ -2375,7 +2375,7 @@
       "searchable": 1,
       "quickSearch": 0,
       "changeable": 0,
-      "ext": "./libs/bilibili.json"
+      "ext": "https://raw.liucn.cc/box/libs/bilibili.json"
     },
     {
       "key": "Biliych",
@@ -2389,7 +2389,7 @@
       "searchable": 1,
       "quickSearch": 0,
       "changeable": 0,
-      "ext": "./libs/biliych.json"
+      "ext": "https://raw.liucn.cc/box/libs/biliych.json"
     },
     {
       "key": "Aid",
@@ -2408,18 +2408,18 @@
       "key": "dr_童趣",
       "name": "🧗‍┃童趣┃播视",
       "type": 3,
-      "api": "./libs/js/drpy2.min.js",
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "./libs/js/童趣.js"
+      "ext": "https://raw.liucn.cc/box/libs/js/童趣.js"
     },
     {
       "key": "dr_兔小贝",
       "name": "📚儿童┃启蒙",
       "type": 3,
-      "api": "./libs/js/drpy2.min.js",
-      "ext": "./libs/js/兔小贝.js",
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
+      "ext": "https://raw.liucn.cc/box/libs/js/兔小贝.js",
       "style": {
         "type": "rect",
         "ratio": 1.597
@@ -2440,7 +2440,7 @@
       "searchable": 0,
       "quickSearch": 0,
       "changeable": 0,
-      "ext": "./libs/少儿教育.json"
+      "ext": "https://raw.liucn.cc/box/libs/少儿教育.json"
     },
     {
       "key": "小学课堂",
@@ -2454,7 +2454,7 @@
       "searchable": 0,
       "quickSearch": 0,
       "changeable": 0,
-      "ext": "./libs/小学课堂.json"
+      "ext": "https://raw.liucn.cc/box/libs/小学课堂.json"
     },
     {
       "key": "初中课堂",
@@ -2468,7 +2468,7 @@
       "searchable": 0,
       "quickSearch": 0,
       "changeable": 0,
-      "ext": "./libs/初中课堂.json"
+      "ext": "https://raw.liucn.cc/box/libs/初中课堂.json"
     },
     {
       "key": "高中教育",
@@ -2482,7 +2482,7 @@
       "searchable": 0,
       "quickSearch": 0,
       "changeable": 0,
-      "ext": "./libs/高中课堂.json"
+      "ext": "https://raw.liucn.cc/box/libs/高中课堂.json"
     },
     {
       "key": "csp_Bili",
@@ -2492,8 +2492,8 @@
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
-      "jar": "./libs/jar/XBPQ.jar",
-      "ext": "./libs/bili.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/XBPQ.jar",
+      "ext": "https://raw.liucn.cc/box/libs/bili.json"
     },
     {
       "key": "csp_Bili_dashan",
@@ -2503,8 +2503,8 @@
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/搭讪.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/搭讪.json"
     },
     {
       "key": "csp_Bili__dapei",
@@ -2514,18 +2514,18 @@
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/搭配.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/搭配.json"
     },
     {
       "key": "js_B站精简",
       "name": "🅱️┃哔哩┃精简",
       "type": 3,
-      "api": "./libs/js/drpy2.min.js",
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 1,
-      "ext": "./libs/js/B站精简.js"
+      "ext": "https://raw.liucn.cc/box/libs/js/B站精简.js"
     },
     {
       "key": "csp_Bili_meishi",
@@ -2535,8 +2535,8 @@
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/美食合集.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/美食合集.json"
     },
     {
       "key": "csp_Bili_youer",
@@ -2546,8 +2546,8 @@
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/幼儿.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/幼儿.json"
     },
     {
       "key": "csp_Bili_xiaoxue",
@@ -2557,8 +2557,8 @@
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/小学.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/小学.json"
     },
     {
       "key": "csp_Bili_czxx",
@@ -2568,8 +2568,8 @@
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/初中.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/初中.json"
     },
     {
       "key": "csp_Bili_gaozxx",
@@ -2579,8 +2579,8 @@
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/高中.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/高中.json"
     },
     {
       "key": "csp_Bili_zyy",
@@ -2590,8 +2590,8 @@
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/中医.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/中医.json"
     },
     {
       "key": "csp_Bili_xuqu1",
@@ -2601,8 +2601,8 @@
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/戏曲.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/戏曲.json"
     },
     {
       "key": "csp_Bili_TYjs",
@@ -2612,8 +2612,8 @@
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/体育.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/体育.json"
     },
     {
       "key": "csp_Bili_xiangsh",
@@ -2623,8 +2623,8 @@
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/相声.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/相声.json"
     },
     {
       "key": "csp_Bili_FBqx",
@@ -2634,8 +2634,8 @@
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/球队.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/球队.json"
     },
     {
       "key": "csp_Bili_Meinvw",
@@ -2645,8 +2645,8 @@
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/美女.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/美女.json"
     },
     {
       "key": "csp_Bili_yanchh",
@@ -2656,8 +2656,8 @@
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/歌手.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/歌手.json"
     },
     {
       "key": "csp_Bili_Nvtuan",
@@ -2667,8 +2667,8 @@
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/女团.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/女团.json"
     },
     {
       "key": "MV_vod",
@@ -2687,8 +2687,8 @@
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/歌曲.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/歌曲.json"
     },
     {
       "key": "csp_Bili_Yinl2",
@@ -2698,25 +2698,25 @@
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/音悦.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/音悦.json"
     },
     {
       "key": "js_哔哩直播",
       "name": "🅱️┃哔哩┃直播",
       "type": 3,
-      "api": "./libs/js/drpy2.min.js",
+      "api": "https://raw.liucn.cc/box/libs/js/drpy2.min.js",
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 0,
-      "ext": "./libs/哔哩直播.js"
+      "ext": "https://raw.liucn.cc/box/libs/哔哩直播.js"
     },
     {
       "key": "drpy_js_Alist",
       "name": "网盘 | Alist[js]",
       "type": 3,
-      "api": "./libs/js/alist.min.js",
-      "ext": "./libs/js/alist.json"
+      "api": "https://raw.liucn.cc/box/libs/js/alist.min.js",
+      "ext": "https://raw.liucn.cc/box/libs/js/alist.json"
     },
     {
       "key": "本地",
@@ -2733,7 +2733,7 @@
       "api": "csp_AList",
       "searchable": 1,
       "changeable": 0,
-      "ext": "./libs/js/alist1.json"
+      "ext": "https://raw.liucn.cc/box/libs/js/alist1.json"
     },
     {
       "key": "WebDAV",
@@ -2742,7 +2742,7 @@
       "api": "csp_WebDAV",
       "searchable": 1,
       "changeable": 0,
-      "ext": "./libs/js/webdav.json"
+      "ext": "https://raw.liucn.cc/box/libs/js/webdav.json"
     },
     {
       "key": "csp_AList",
@@ -2799,8 +2799,8 @@
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 0,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/短视频聚合.json"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+      "ext": "https://raw.liucn.cc/box/libs/hccx/短视频聚合.json"
     }
   ],
   "parses": [
@@ -3590,7 +3590,7 @@
     {
       "name": "SAO0",
       "type": 0,
-      "url": "./libs/tv/tvlive.txt",
+      "url": "https://raw.liucn.cc/box/libs/tv/tvlive.txt",
       "playerType": 1,
       "ua": "okhttp/3.15",
       "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
@@ -3599,7 +3599,7 @@
     {
       "name": "IPV6",
       "type": 0,
-      "url": "./lib/tv/ipv6.m3u",
+      "url": "https://raw.liucn.cc/box/lib/tv/ipv6.m3u",
       "playerType": 1,
       "ua": "okhttp/3.15",
       "epg": "http://epg.112114.xyz/?ch={name}&date={date}",

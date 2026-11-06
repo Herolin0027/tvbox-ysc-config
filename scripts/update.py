@@ -18,20 +18,25 @@
 用法：
   python scripts/update.py
 """
+import base64
 import datetime
 import json
 import os
+import re
 import sys
 import time
 import urllib.parse
 
 import requests
+from Crypto.Cipher import AES
+from Crypto.Util.Padding import unpad
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONFIG_FILE = os.path.join(ROOT, "config", "sources.json")
+SHORT_DRAMA_FILE = os.path.join(ROOT, "config", "short_drama_sources.json")
 OUTPUT_DIR = os.path.join(ROOT, "output")
 
-DEFAULT_REPO = "YOUR_USERNAME/tvbox-ysc-config"  # 本地运行时的占位仓库名，GitHub Actions 会自动覆盖
+DEFAULT_REPO = "Herolin0027/tvbox-ysc-config"  # 本地运行时的占位仓库名，GitHub Actions 会自动覆盖
 
 # 注意：部分接口的反爬会针对"完整 Chrome UA"下发挑战页，反而用简洁 UA 能正常返回 JSON
 USER_AGENT = "Mozilla/5.0"
@@ -56,22 +61,74 @@ def _strip_js_comments(text: str) -> str:
 
 
 def parse_json_lenient(text: str):
-    """宽容解析：去 BOM/空白、剔 // 注释后优先整体 json.loads；
-    若接口返回了拼接的多段 JSON，取第一段有效对象。"""
-    text = text.lstrip("\ufeff").strip()
+    """宽容解析普通 JSON；只移除独立 // 注释行，避免误删 URL 中的 //。"""
+    text = text.lstrip("\ufeff\u200b").strip()
     text = _strip_js_comments(text)
     try:
-        # strict=False 允许字符串中出现未转义的控制字符（部分接口的 JSON 不规范）
         return json.loads(text, strict=False)
     except json.JSONDecodeError:
-        # 兼容"返回了多个 JSON 拼接在一起"的接口
         decoder = json.JSONDecoder(strict=False)
-        try:
-            obj, _ = decoder.raw_decode(text)
-            return obj
-        except Exception:
-            raise
+        obj, _ = decoder.raw_decode(text)
+        return obj
 
+
+_FONGMI_BASE64_PREFIX = re.compile(r"[A-Za-z0-9]{8}\*\*")
+
+
+def _fongmi_base64(text: str) -> str:
+    """对应 FongMi Decoder.base64：识别 8 位标记** 后的 Base64 内容。"""
+    match = _FONGMI_BASE64_PREFIX.search(text)
+    if not match or match.end() == len(text):
+        return text
+    encoded = re.sub(r"\s+", "", text[match.end():]).replace("-", "+").replace("_", "/")
+    return base64.b64decode(encoded + "=" * (-len(encoded) % 4)).decode("utf-8")
+
+
+def _fongmi_aes_cbc(text: str) -> str:
+    """对应 FongMi Decoder.cbc + Crypto.decryptAesCbc。"""
+    compact = re.sub(r"\s+", "", text)
+    raw = bytes.fromhex(compact)
+    decoded = raw.decode("utf-8").lower()
+    key_start = decoded.index("$#") + 2
+    key_end = decoded.index("#$", key_start)
+    key_text = decoded[key_start:key_end]
+    iv_text = decoded[-13:]
+    if len(key_text) > 16:
+        raise ValueError("FongMi AES key 长度超过 16 字节")
+    key = (key_text + "0" * 16)[:16].encode("utf-8")
+    iv = (iv_text + "0" * 16)[:16].encode("utf-8")
+    marker = compact.index("2324") + 4
+    encrypted = bytes.fromhex(compact[marker:-26])
+    plain = AES.new(key, AES.MODE_CBC, iv).decrypt(encrypted)
+    return unpad(plain, AES.block_size).decode("utf-8")
+
+
+def decode_fongmi_payload(url: str, text: str) -> str:
+    """按 FongMi Decoder.verify/fix 的顺序处理配置正文。"""
+    data = (text or "").lstrip("\ufeff").strip()
+    if not data:
+        raise ValueError("响应正文为空")
+    if not data.startswith("{"):
+        if "**" in data:
+            data = _fongmi_base64(data)
+        if data.startswith("2423"):
+            data = _fongmi_aes_cbc(data)
+
+    # 对齐 FongMi Decoder.fix 的相对 JS 路径修复。
+    data = re.sub(
+        r'"(\.|\.\.)/(.?|.+?)\.js\?(.?|.+?)"',
+        lambda m: '"' + urllib.parse.urljoin(url, m.group(0)[1:-1]) + '"',
+        data,
+    )
+    data = data.replace("../", urllib.parse.urljoin(url, "../"))
+    data = data.replace("./", urllib.parse.urljoin(url, "./"))
+    data = data.replace("__JS1__", "./").replace("__JS2__", "../")
+    return data
+
+
+def parse_fongmi_json(url: str, text: str):
+    """先执行 FongMi 正文解码，再解析 JSON。"""
+    return parse_json_lenient(decode_fongmi_payload(url, text))
 
 def idn_encode(url: str) -> str:
     """将 URL 中的中文（国际化）域名转成 punycode，避免 DNS 解析失败。
@@ -91,16 +148,28 @@ def idn_encode(url: str) -> str:
     )
 
 
-def is_valid_tvbox_config(data) -> bool:
-    """粗略校验：返回内容是否像 TVBox/影视仓 配置（单仓或多仓订阅）。"""
+def is_single_tvbox_config(data) -> bool:
+    """判断是否为可参与单仓聚合的配置；仅有 sites 数组才算单仓。"""
     if not isinstance(data, dict):
         return False
-    if any(key in data for key in TVBOX_KEYS):
-        return True
-    # 多仓订阅格式：{"urls": [{"name":..., "url":...}, ...]}
-    if "urls" in data and isinstance(data.get("urls"), list) and data["urls"]:
-        return True
-    return False
+    sites = data.get("sites")
+    return isinstance(sites, list) and any(isinstance(site, dict) for site in sites)
+
+
+def is_multi_subscription(data) -> bool:
+    """判断是否为多仓订阅；多仓入口不能误作为单仓参与聚合。"""
+    if not isinstance(data, dict):
+        return False
+    urls = data.get("urls")
+    return isinstance(urls, list) and any(
+        isinstance(item, dict) and isinstance(item.get("url"), str) and item["url"].strip()
+        for item in urls
+    )
+
+
+def is_valid_tvbox_config(data) -> bool:
+    """校验 TVBox/影视仓 单仓或多仓结构，避免仅凭字段存在就误判。"""
+    return is_single_tvbox_config(data) or is_multi_subscription(data)
 
 
 def _should_retry(err: Exception, resp_text_len: int = -1) -> bool:
@@ -121,29 +190,44 @@ def _should_retry(err: Exception, resp_text_len: int = -1) -> bool:
 
 
 def fetch_config(url: str) -> dict:
-    """抓取单个地址并解析为 JSON dict；失败时抛出异常。"""
+    """抓取并按 FongMi 官方 Decoder 的规则解码配置。"""
     target = idn_encode(url)
     last_err = None
     for attempt in range(1, MAX_RETRIES + 1):
+        resp = None
         try:
             resp = requests.get(
                 target,
                 headers={
-                    "User-Agent": USER_AGENT,
-                    "Accept": "application/json,text/plain,*/*",
+                    "User-Agent": "okhttp/4.12.0",
+                    "Accept": "*/*",
+                    "Accept-Encoding": "gzip",
+                    "Connection": "keep-alive",
                 },
-                timeout=TIMEOUT,
+                timeout=(10, TIMEOUT),
                 allow_redirects=True,
             )
-            resp.raise_for_status()
-            data = parse_json_lenient(resp.text)
+            # FongMi Decoder 读取正文后解析，不以 HTTP 状态码单独判死刑。
+            final_url = resp.url or target
+            data = parse_fongmi_json(final_url, resp.text)
             if not is_valid_tvbox_config(data):
-                raise ValueError("返回内容不是 TVBox 配置（缺少 sites/spiders/lives 或 urls 字段）")
+                preview = repr((resp.text or "")[:120])
+                raise ValueError(
+                    f"响应不是可识别的 TVBox/FongMi 配置；HTTP {resp.status_code}，"
+                    f"Content-Type={resp.headers.get('Content-Type', '未知')}，正文前 120 字={preview}"
+                )
+            if not resp.ok:
+                print(f"      [NOTICE] HTTP {resp.status_code}，但正文可按 FongMi 规则解析，接受配置")
             return data
         except Exception as e:  # noqa: BLE001
             last_err = e
-            text_len = len(getattr(resp, "text", "") or "") if "resp" in locals() else -1
-            if _should_retry(e, text_len) and attempt < MAX_RETRIES:
+            text_len = len(resp.text or "") if resp is not None else -1
+            retryable = (
+                isinstance(e, (requests.exceptions.Timeout, requests.exceptions.ConnectionError))
+                or text_len <= 0
+                or isinstance(e, (json.JSONDecodeError, ValueError))
+            )
+            if retryable and attempt < MAX_RETRIES:
                 wait = RETRY_BACKOFF * attempt * 2
                 print(f"      (第 {attempt} 次失败：{e}，{wait}s 后重试)")
                 time.sleep(wait)
@@ -151,19 +235,16 @@ def fetch_config(url: str) -> dict:
                 break
     raise last_err
 
-
 def _merge_list(fetched, field):
-    """合并各源中的列表字段（lives/parses/doh 等），按 name/url 去重。"""
+    """合并列表字段。使用完整内容去重，避免同名不同地址的项目被误删。"""
     seen = set()
     out = []
     for _sid, _name, data in fetched:
-        for item in data.get(field, []) or []:
-            if isinstance(item, dict):
-                ident = item.get("name") or item.get("url") or json.dumps(
-                    item, ensure_ascii=False, sort_keys=True
-                )
-            else:
-                ident = str(item)
+        values = data.get(field, [])
+        if not isinstance(values, list):
+            continue
+        for item in values:
+            ident = json.dumps(item, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
             if ident in seen:
                 continue
             seen.add(ident)
@@ -172,47 +253,61 @@ def _merge_list(fetched, field):
 
 
 def merge_configs(fetched):
-    """把多个单仓配置合并成一个聚合单仓：
-    - 以第一个成功源为基底（保留 spider/logo/wallpaper 等）
-    - sites 按 key 去重，重复 key 加源 id 前缀
-    - lives/parses/doh/rules/flags/exts 等列表合并去重
-    fetched: [(sid, name, data_dict), ...]
-    """
-    if not fetched:
+    """合并单仓配置。多仓订阅明确排除，避免生成空 sites 的伪单仓。"""
+    single_sources = [
+        item for item in fetched
+        if len(item) == 3 and is_single_tvbox_config(item[2])
+    ]
+    if not single_sources:
         return None
-    _base_sid, base_name, base = fetched[0]
+
+    _base_sid, base_name, base = single_sources[0]
     merged = {}
-    skip = {"sites", "lives", "parses", "doh", "rules", "flags", "exts", "ads"}
+    list_fields = (
+        "lives", "parses", "doh", "rules", "flags", "exts",
+        "ads", "hosts", "ijk", "proxy",
+    )
+    skip = {"sites", *list_fields}
     for k, v in base.items():
         if k not in skip:
             merged[k] = v
     merged["warningText"] = (
-        f"本配置由 {len(fetched)} 个公开源自动聚合（含{base_name}等），仅供学习交流，请勿商用"
+        f"本配置由 {len(single_sources)} 个单仓源自动聚合（含{base_name}等），"
+        "各站点可用性及插件兼容性以客户端实际测试为准"
     )
 
     seen_keys = set()
     sites = []
-    for sid, _name, data in fetched:
-        for s in data.get("sites", []) or []:
-            if not isinstance(s, dict):
+    for sid, _name, data in single_sources:
+        for index, site in enumerate(data.get("sites", [])):
+            if not isinstance(site, dict):
                 continue
-            key = s.get("key")
-            if key is None:
-                key = json.dumps(s, ensure_ascii=False, sort_keys=True)
+            original_key = site.get("key")
+            key = str(original_key).strip() if original_key is not None else ""
+            if not key:
+                key = f"{sid}_site_{index + 1}"
             new_key = key
-            if key in seen_keys:
-                new_key = f"{sid}_{key}"
             if new_key in seen_keys:
-                continue
+                new_key = f"{sid}_{key}"
+            suffix = 2
+            candidate = new_key
+            while candidate in seen_keys:
+                candidate = f"{new_key}_{suffix}"
+                suffix += 1
+            new_key = candidate
             seen_keys.add(new_key)
-            if new_key != key:
-                s = dict(s)
-                s["key"] = new_key
-            sites.append(s)
+            copied = dict(site)
+            copied["key"] = new_key
+            sites.append(copied)
     merged["sites"] = sites
 
-    for field in ("lives", "parses", "doh", "rules", "flags", "exts"):
-        merged[field] = _merge_list(fetched, field)
+    for field in list_fields:
+        # 某些配置把 proxy 等字段定义为对象或字符串；只合并确实为数组的字段。
+        values = [item for item in single_sources if isinstance(item[2].get(field), list)]
+        if values:
+            merged[field] = _merge_list(values, field)
+        elif field in base:
+            merged[field] = base[field]
 
     return merged
 
@@ -239,6 +334,8 @@ def update_readme(status, ok_count, total):
     for s in status["sources"]:
         if s.get("cached"):
             lines.append(f"| {s['name']} | 📦 缓存 | 上次成功配置（本次更新未抓到，沿用缓存） |")
+        elif s.get("direct_fallback"):
+            lines.append(f"| {s['name']} | ⚠️ 直连回退 | 已保留源站地址；本次未通过抓取校验 |")
         elif s["ok"]:
             lines.append(f"| {s['name']} | ✅ 成功 | `{s['used_url']}` |")
         else:
@@ -284,15 +381,20 @@ def main() -> int:
     now_str = datetime.datetime.now(tz).strftime("%Y-%m-%d %H:%M:%S")
 
     # GitHub Actions 中自动注入 GITHUB_REPOSITORY=owner/repo
+    # 私人主仓构建时，订阅 URL 必须指向公开发布仓库，而不是私人仓库。
     repo = (
-        os.environ.get("GITHUB_REPOSITORY")
+        os.environ.get("PUBLIC_REPOSITORY")
+        or os.environ.get("GITHUB_REPOSITORY")
         or os.environ.get("REPO")
         or DEFAULT_REPO
     )
     raw_base = f"https://gh-proxy.org/https://raw.githubusercontent.com/{repo}/main/output"
 
     status = {"updated_at": now_str, "repo": repo, "sources": []}
-    subscriptions = []
+    subscriptions = [
+        item for item in cfg.get("direct_subscriptions", [])
+        if isinstance(item, dict) and item.get("name") and item.get("url")
+    ]
     fetched = []  # [(sid, name, data_dict), ...] 用于聚合单仓
 
     ok_count = 0
@@ -316,7 +418,11 @@ def main() -> int:
                 subscriptions.append(
                     {"name": name, "url": f"{raw_base}/{sid}.json"}
                 )
-                fetched.append((sid, name, data))
+                if is_single_tvbox_config(data):
+                    fetched.append((sid, name, data))
+                    entry["config_type"] = "single"
+                else:
+                    entry["config_type"] = "multi"
                 ok_count += 1
                 saved = True
                 print(f"[OK]   {name} <- {url}")
@@ -339,7 +445,11 @@ def main() -> int:
                         subscriptions.append(
                             {"name": name, "url": f"{raw_base}/{sid}.json"}
                         )
-                        fetched.append((sid, name, cached))
+                        if is_single_tvbox_config(cached):
+                            fetched.append((sid, name, cached))
+                            entry["config_type"] = "single"
+                        else:
+                            entry["config_type"] = "multi"
                         entry["ok"] = True
                         entry["cached"] = True
                         entry["used_url"] = "(缓存)"
@@ -349,12 +459,46 @@ def main() -> int:
                 except Exception:
                     pass
             if not saved:
+                # 没有本地缓存时，也保留该源的外部直连接口，避免多仓订阅中整项消失。
+                # 该入口不代表抓取校验成功；设备端仍会直接访问源站。
+                direct_url = src.get("direct_url") or (urls[0] if urls else None)
+                if direct_url:
+                    subscriptions.append({"name": name, "url": direct_url})
+                    entry["direct_fallback"] = True
+                    entry["direct_url"] = direct_url
+                    print(f"[DIRECT] {name}  抓取失败，保留源站直连接口：{direct_url}")
                 entry["error"] = entry["error"] or "所有地址均失败"
                 print(f"[FAIL] {name}  全部地址失败")
         status["sources"].append(entry)
 
         # 源之间稍作间隔，避免集中请求被限流
         time.sleep(SOURCE_INTERVAL)
+
+    # 普通短剧是独立维护清单：同时生成独立文件，并进入多仓与单仓聚合。
+    # 不扫描 output 目录，也不读取其他隐藏/私有清单。
+    if os.path.exists(SHORT_DRAMA_FILE):
+        with open(SHORT_DRAMA_FILE, "r", encoding="utf-8") as f:
+            drama_data = json.load(f)
+        if is_single_tvbox_config(drama_data):
+            drama_sites = []
+            for index, site in enumerate(drama_data.get("sites", [])):
+                if not isinstance(site, dict):
+                    continue
+                copied = dict(site)
+                original_key = str(copied.get("key") or f"site_{index + 1}").strip()
+                copied["key"] = f"short_{original_key}"
+                drama_sites.append(copied)
+            drama_output = dict(drama_data)
+            drama_output["sites"] = drama_sites
+            with open(os.path.join(OUTPUT_DIR, "short_drama.json"), "w", encoding="utf-8") as f:
+                json.dump(drama_output, f, ensure_ascii=False, indent=2)
+            subscriptions.append({
+                "name": "普通短剧",
+                "url": f"{raw_base}/short_drama.json"
+            })
+            fetched.append(("short_drama", "普通短剧", drama_output))
+            print(f"[OK]   普通短剧清单（{len(drama_sites)} 个入口）")
+
 
     # 生成多仓订阅文件（影视仓"订阅/多仓"格式）
     sub_path = os.path.join(OUTPUT_DIR, "多仓订阅.json")
@@ -364,10 +508,23 @@ def main() -> int:
     # 生成聚合单仓文件（把所有成功源的 sites/lives/parses 合并成一个单仓）
     merged = merge_configs(fetched)
     merged_path = os.path.join(OUTPUT_DIR, "单仓聚合.json")
-    if merged is not None:
+    if merged is not None and merged.get("sites"):
         with open(merged_path, "w", encoding="utf-8") as f:
             json.dump(merged, f, ensure_ascii=False, indent=2)
         print(f"聚合单仓：{merged_path}（共 {len(merged.get('sites', []))} 个站点）")
+        status["single_aggregate"] = {
+            "generated": True,
+            "source_count": len(fetched),
+            "site_count": len(merged.get("sites", [])),
+        }
+    else:
+        # 本轮没有可用单仓源时，不覆盖上一次有效的聚合文件。
+        status["single_aggregate"] = {
+            "generated": False,
+            "source_count": 0,
+            "site_count": 0,
+            "retained_previous": os.path.exists(merged_path),
+        }
 
     # 生成更新状态文件（时间取全部抓取完成之后）
     status["updated_at"] = datetime.datetime.now(tz).strftime("%Y-%m-%d %H:%M:%S")
@@ -381,7 +538,7 @@ def main() -> int:
 
     print("\n" + "=" * 50)
     print(f"本次更新：{ok_count}/{total} 个源成功")
-    print(f"多仓订阅：{sub_path}")
+    print(f"多仓订阅：{sub_path}（共 {len(subscriptions)} 个入口，含失败源直连回退）")
     if ok_count == 0:
         print("没有任何源更新成功，返回非 0 退出码。")
         return 1

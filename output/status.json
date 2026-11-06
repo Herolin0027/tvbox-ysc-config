@@ -1,49 +1,55 @@
 {
-  "updated_at": "2026-11-06 04:56:36",
-  "repo": "Lightconer/tvbox-ysc-config",
+  "updated_at": "2026-11-06 15:11:39",
+  "repo": "Herolin0027/tvbox-ysc-config",
   "sources": [
     {
       "id": "feimao",
       "name": "肥猫",
       "ok": true,
       "used_url": "(缓存)",
-      "error": "401 Client Error:  for url: https://6296.kstore.vip/facat.json",
+      "error": "Expecting value: line 1 column 1 (char 0)",
+      "config_type": "single",
       "cached": true
     },
     {
       "id": "fantaiying",
       "name": "饭太硬",
-      "ok": false,
-      "used_url": null,
-      "error": "HTTPConnectionPool(host='www.xn--sss604efuw.xyz', port=80): Max retries exceeded with url: /tv (Caused by NameResolutionError(\"HTTPConnection(host='www.xn--sss604efuw.xyz', port=80): Failed to resolve 'www.xn--sss604efuw.xyz' ([Errno -2] Name or service not known)\"))"
+      "ok": true,
+      "used_url": "http://www.饭太硬.cc/tv",
+      "error": null,
+      "config_type": "single"
     },
     {
       "id": "wangerxiao",
       "name": "王二小",
       "ok": true,
       "used_url": "https://d.kstore.dev/download/9280/wex.json",
-      "error": null
+      "error": null,
+      "config_type": "single"
     },
     {
       "id": "laoliubei",
       "name": "老刘备",
       "ok": true,
       "used_url": "https://raw.liucn.cc/box/m.json",
-      "error": null
+      "error": null,
+      "config_type": "single"
     },
     {
       "id": "xiaoma",
       "name": "小马",
       "ok": true,
       "used_url": "https://szyyds.cn/tv/x.json",
-      "error": null
+      "error": null,
+      "config_type": "single"
     },
     {
       "id": "ouge",
       "name": "讴歌",
       "ok": true,
       "used_url": "(缓存)",
-      "error": "HTTPSConnectionPool(host='xn--dkw0c.v.nxog.top', port=443): Max retries exceeded with url: /m/ (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] ssl/tls alert handshake failure (_ssl.c:1018)')))",
+      "error": "HTTPSConnectionPool(host='xn--dkw0c.v.nxog.top', port=443): Max retries exceeded with url: /m/ (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1018)')))",
+      "config_type": "single",
       "cached": true
     },
     {
@@ -51,28 +57,55 @@
       "name": "4K小盒子",
       "ok": true,
       "used_url": "http://xhztv.top/4k.json",
-      "error": null
+      "error": null,
+      "config_type": "single"
     },
     {
       "id": "xiaohezi",
       "name": "小盒子单仓",
       "ok": true,
       "used_url": "http://xhztv.top/xhz",
-      "error": null
+      "error": null,
+      "config_type": "single"
     },
     {
       "id": "shiguang",
       "name": "拾光多仓",
       "ok": true,
       "used_url": "http://xmbjm.fh4u.org/dc.txt",
-      "error": null
+      "error": null,
+      "config_type": "multi"
     },
     {
       "id": "tinghao",
       "name": "挺好分享多仓",
       "ok": true,
       "used_url": "http://ztha.top/TVBox/GYCK.json",
-      "error": null
+      "error": null,
+      "config_type": "multi"
+    },
+    {
+      "id": "qiaoji",
+      "name": "巧技",
+      "ok": false,
+      "used_url": null,
+      "error": "HTTPConnectionPool(host='cdn.qiaoji8.com', port=80): Max retries exceeded with url: /tvbox.json (Caused by NameResolutionError(\"HTTPConnection(host='cdn.qiaoji8.com', port=80): Failed to resolve 'cdn.qiaoji8.com' ([Errno -2] Name or service not known)\"))",
+      "direct_fallback": true,
+      "direct_url": "http://cdn.qiaoji8.com/tvbox.json"
+    },
+    {
+      "id": "nanfeng",
+      "name": "南风",
+      "ok": false,
+      "used_url": null,
+      "error": "Expecting value: line 1 column 1 (char 0)",
+      "direct_fallback": true,
+      "direct_url": "https://raw.githubusercontent.com/yoursmile66/TVBox/main/XC.json"
     }
-  ]
+  ],
+  "single_aggregate": {
+    "generated": true,
+    "source_count": 9,
+    "site_count": 576
+  }
 }
