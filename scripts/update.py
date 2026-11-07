@@ -26,6 +26,7 @@ import re
 import sys
 import time
 import urllib.parse
+from collections import Counter
 
 import requests
 from Crypto.Cipher import AES
@@ -278,7 +279,9 @@ def merge_configs(fetched):
 
     seen_keys = set()
     sites = []
-    for sid, _name, data in single_sources:
+    site_sources = []
+    for sid, source_name, data in single_sources:
+        spider = data.get("spider")
         for index, site in enumerate(data.get("sites", [])):
             if not isinstance(site, dict):
                 continue
@@ -298,7 +301,36 @@ def merge_configs(fetched):
             seen_keys.add(new_key)
             copied = dict(site)
             copied["key"] = new_key
+            api = copied.get("api")
+            # 合并后，未指定 jar 的 CSP 会继承聚合配置的默认 Spider。
+            if (
+                isinstance(api, str) and api.startswith("csp_")
+                and not copied.get("jar") and isinstance(spider, str)
+                and spider.strip() and spider != merged.get("spider")
+            ):
+                copied["jar"] = spider
+            if sid == "ouge" and key == "csp_wogg1" and api == "csp_Duopan":
+                copied["name"] = "玩偶｜夸克网盘"
             sites.append(copied)
+            site_sources.append(source_name)
+
+    # 同名站点可能来自同一个上游，保留不同实现并标明配置来源。
+    name_counts = Counter(
+        site["name"] for site in sites if isinstance(site.get("name"), str)
+    )
+    used_names = set(name_counts)
+    for site, source_name in zip(sites, site_sources):
+        name = site.get("name")
+        if not isinstance(name, str) or not name.strip() or name_counts[name] < 2:
+            continue
+        label = f"{name}（{source_name}）"
+        candidate = label
+        number = 2
+        while candidate in used_names:
+            candidate = f"{label} {number}"
+            number += 1
+        site["name"] = candidate
+        used_names.add(candidate)
     merged["sites"] = sites
 
     for field in list_fields:

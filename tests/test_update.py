@@ -65,6 +65,45 @@ class MergeTests(unittest.TestCase):
         result = merge_configs(fetched)
         self.assertEqual([x["key"] for x in result["sites"]], ["vod", "b_vod"])
 
+    def test_csp_sites_keep_source_spider_and_explicit_jar(self):
+        base_jar = "https://base.example/spider.jar"
+        other_jar = "https://other.example/spider.jpg;md5;checksum"
+        explicit_jar = "https://custom.example/spider.jar"
+        fetched = [
+            ("a", "A", {"spider": base_jar, "sites": [{"key": "base", "api": "csp_A"}]}),
+            ("b", "B", {"spider": other_jar, "sites": [
+                {"key": "inherit", "api": "csp_B"},
+                {"key": "custom", "api": "csp_B", "jar": explicit_jar},
+                {"key": "js", "api": "https://other.example/spider.js"},
+            ]}),
+        ]
+        result = merge_configs(fetched)
+        self.assertEqual(result["spider"], base_jar)
+        self.assertEqual(
+            [site.get("jar") for site in result["sites"]],
+            [None, other_jar, explicit_jar, None],
+        )
+        self.assertNotIn("jar", fetched[1][2]["sites"][0])
+
+    def test_duplicate_display_names_keep_all_sites_with_unique_labels(self):
+        sources = [
+            ("a", "A", {"sites": [
+                {"key": "one", "name": "玩偶"},
+                {"key": "two", "name": "玩偶"},
+            ]}),
+            ("b", "B", {"sites": [
+                {"key": "one", "name": "玩偶"},
+                {"key": "other", "name": "玩偶（B）"},
+            ]}),
+        ]
+        result = merge_configs(sources)
+        self.assertEqual([s["key"] for s in result["sites"]], ["one", "two", "b_one", "other"])
+        self.assertEqual(
+            [s["name"] for s in result["sites"]],
+            ["玩偶（A）", "玩偶（A） 2", "玩偶（B） 2", "玩偶（B）"],
+        )
+        self.assertEqual(sources[0][2]["sites"][0]["name"], "玩偶")
+
     def test_additional_list_fields_are_merged(self):
         fetched = [
             ("a", "A", {
