@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13 05:16:21",
+  "updated_at": "2026-11-13 16:55:19",
   "repo": "Herolin0027/tvbox-ysc-config",
   "sources": [
     {
@@ -106,6 +106,6 @@
   "single_aggregate": {
     "generated": true,
     "source_count": 9,
-    "site_count": 576
+    "site_count": 577
   }
 }
