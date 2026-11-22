@@ -1,15 +1,14 @@
 {
-  "updated_at": "2026-11-22 04:19:19",
+  "updated_at": "2026-11-22 17:03:51",
   "repo": "Herolin0027/tvbox-ysc-config",
   "sources": [
     {
       "id": "feimao",
       "name": "肥猫",
       "ok": true,
-      "used_url": "(缓存)",
-      "error": "Expecting value: line 1 column 1 (char 0)",
-      "config_type": "single",
-      "cached": true
+      "used_url": "https://6296.kstore.vip/facat.json",
+      "error": null,
+      "config_type": "single"
     },
     {
       "id": "fantaiying",

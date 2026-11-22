@@ -1,6 +1,5 @@
 {
-  "spider": "https://ss1.eisite.cn/autoupload/f/eja2s/20261102/WU58/0X0/fm261102c.png;md5;6a396033ae45efee57ba789f91d7123e",
-  "danmaku": "http://127.0.0.1:9978/proxy?do=danmaku&name={name}&episode={episode}",
+  "spider": "https://img2.gelonghui.com/library/3f9b9-de4a5d2c-7fea-4d70-8a85-79be6c379621.png;md5;3f9b9cac793a3e9b818131c8a7208800",
   "wallpaper": "https://深色壁纸.xxooo.cf/",
   "logo": "http://w.junce.dpdns.org/fm.gif",
   "headers": [
@@ -11,6 +10,7 @@
       }
     }
   ],
+  "danmaku": "http://127.0.0.1:9978/proxy?do=danmaku&name={name}&episode={episode}",
   "warningText": "本配置由 9 个单仓源自动聚合（含肥猫等），各站点可用性及插件兼容性以客户端实际测试为准",
   "sites": [
     {
@@ -57,6 +57,10 @@
           {
             "name": "Kazumi",
             "url": "https://pan.quark.cn/s/e77ca870e15e"
+          },
+          {
+            "name": "LxMusic",
+            "url": "https://pan.quark.cn/s/c24085164146"
           }
         ]
       }
@@ -83,16 +87,39 @@
       "type": 3,
       "api": "csp_Duopan",
       "filterable": 1,
+      "timeout": 30,
       "ext": {
         "site_urls": [
-          "http://shandian.blog/",
-          "http://sd.sduc.site/"
+          "http://oo.sduc.site/"
         ],
         "threadinfo": {
           "chunksize": 512,
           "threads": 16
         },
         "url_key": "FeiMaoUC"
+      }
+    },
+    {
+      "key": "csp_Duopan",
+      "name": "🖍︎┃蜡笔┃影视",
+      "type": 3,
+      "api": "csp_Duopan",
+      "filterable": 1,
+      "ext": {
+        "site_urls": [
+          "http://xiaocge.fun",
+          "http://feimo.fun",
+          "http://www.labi88.sbs",
+          "http://fmao.site",
+          "http://fmao.shop",
+          "http://xiaocgege.shop",
+          "http://www.xiaocgege.shop"
+        ],
+        "threadinfo": {
+          "chunksize": 512,
+          "threads": 16
+        },
+        "url_key": "Duopan2"
       }
     },
     {
@@ -246,17 +273,6 @@
       "playerType": 2
     },
     {
-      "key": "厂长",
-      "name": "🏭┃厂长┃影视",
-      "type": 3,
-      "playerType": "2",
-      "api": "csp_Czsapp",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": "https://cz01.vip"
-    },
-    {
       "key": "csp_SP360",
       "name": "📺┃360┃官源",
       "type": 3,
@@ -389,7 +405,7 @@
       "key": "儿童",
       "name": "📚┃儿童┃启蒙",
       "type": 3,
-      "api": "./api/drpy2.min.js",
+      "api": "https://6296.kstore.vip/api/drpy2.min.js",
       "searchable": 0,
       "quickSearch": 0,
       "changeable": 0,
@@ -397,7 +413,7 @@
         "type": "rect",
         "ratio": 1.597
       },
-      "ext": "./js/兔小贝.js"
+      "ext": "https://6296.kstore.vip/js/兔小贝.js"
     },
     {
       "key": "csp_少儿",
@@ -612,7 +628,7 @@
       "jar": "https://xiuxiu-pro-new.meitudata.com/posters/58e1fe36b5683e725729d0addfb5a9e3.jpg;md5;0ce2eae734b7eff47763f3f9e1d8525b"
     },
     {
-      "key": "fantaiying_厂长",
+      "key": "厂长",
       "name": "📔厂长┃不卡",
       "type": 3,
       "api": "csp_NewCzGuard",
@@ -2737,7 +2753,7 @@
       "ext": "https://raw.liucn.cc/box/libs/hccx/兄弟.json"
     },
     {
-      "key": "csp_Duopan",
+      "key": "laoliubei_csp_Duopan",
       "name": "🖍︎┃蜡笔┃云盘",
       "type": 3,
       "api": "csp_Duopan",
@@ -7509,7 +7525,7 @@
     {
       "name": "Gather「果」",
       "type": 3,
-      "url": "https://tv.tmxk.kdns.fr/yplrnuc7",
+      "url": "https://down.nigx.cn/raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
       "epg": "https://material.1989.click/epg.xml.gz",
       "ua": "okhttp/3.8.1",
       "timeout": 10,
@@ -9382,7 +9398,7 @@
   ],
   "rules": [
     {
-      "name": "♻️量非",
+      "name": "量非",
       "hosts": [
         "lz",
         "vip.lz",
@@ -9398,7 +9414,7 @@
       ]
     },
     {
-      "name": "♻️索尼",
+      "name": "索尼",
       "hosts": [
         "suonizy",
         "qrssv.com"
@@ -9409,7 +9425,7 @@
       ]
     },
     {
-      "name": "♻️乐视",
+      "name": "乐视",
       "hosts": [
         "leshiyun"
       ],
@@ -9418,7 +9434,7 @@
       ]
     },
     {
-      "name": "♻️优质",
+      "name": "优质",
       "hosts": [
         "yzzy",
         "playback"
@@ -9431,7 +9447,7 @@
       ]
     },
     {
-      "name": "♻️快看",
+      "name": "快看",
       "hosts": [
         "kuaikan",
         "vip.kuaikan"
@@ -9443,7 +9459,7 @@
       ]
     },
     {
-      "name": "♻️360",
+      "name": "360",
       "hosts": [
         "lyhuicheng"
       ],
@@ -9453,7 +9469,7 @@
       ]
     },
     {
-      "name": "♻️开源棋牌",
+      "name": "开源棋牌",
       "hosts": [
         "askzycdn",
         "jkunbf",
@@ -9466,7 +9482,7 @@
       ]
     },
     {
-      "name": "♻️暴风",
+      "name": "暴风",
       "hosts": [
         "bfengbf.com",
         "bfzy",
@@ -9478,7 +9494,7 @@
       ]
     },
     {
-      "name": "♻️农民",
+      "name": "农民",
       "hosts": [
         "toutiaovod.com"
       ],
@@ -9487,7 +9503,7 @@
       ]
     },
     {
-      "name": "♻️火山",
+      "name": "火山",
       "hosts": [
         "huoshan.com"
       ],
@@ -9496,7 +9512,7 @@
       ]
     },
     {
-      "name": "♻️抖音",
+      "name": "抖音",
       "hosts": [
         "douyin.com"
       ],
@@ -9505,7 +9521,7 @@
       ]
     },
     {
-      "name": "♻️磁力",
+      "name": "磁力",
       "hosts": [
         "magnet"
       ],
@@ -9516,7 +9532,7 @@
       ]
     },
     {
-      "name": "♻️饭团点击",
+      "name": "饭团点击",
       "hosts": [
         "dadagui",
         "freeok",
@@ -9527,7 +9543,7 @@
       ]
     },
     {
-      "name": "♻️毛驴点击",
+      "name": "毛驴点击",
       "hosts": [
         "www.maolvys.com"
       ],
@@ -9955,15 +9971,6 @@
       ]
     },
     {
-      "name": "农民",
-      "hosts": [
-        "toutiaovod.com"
-      ],
-      "regex": [
-        "video/tos/cn"
-      ]
-    },
-    {
       "name": "量子",
       "hosts": [
         "vip.lz",
@@ -9997,24 +10004,6 @@
       "regex": [
         "#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:3,[\\s\\S]*?#EXT-X-DISCONTINUITY",
         "#EXTINF.*?\\s+.*?1o.*?\\.ts\\s+"
-      ]
-    },
-    {
-      "name": "火山",
-      "hosts": [
-        "huoshan.com"
-      ],
-      "regex": [
-        "item_id="
-      ]
-    },
-    {
-      "name": "抖音",
-      "hosts": [
-        "douyin.com"
-      ],
-      "regex": [
-        "is_play_url="
       ]
     }
   ],
